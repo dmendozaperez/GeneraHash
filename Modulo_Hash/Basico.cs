@@ -11,7 +11,11 @@ namespace Modulo_Hash
 {
     public class Basico
     {
-    #region <REGION VARIABLES DE CONFIGURACION>
+        #region<primer exportacion>
+
+        #endregion<>
+
+        #region <REGION VARIABLES DE CONFIGURACION>
         private static string _ruta_in_boleta { set; get; }
         private static string _ruta_in_factura { set; get; }
         private static string _ruta_in_credito { set; get; }
