@@ -11,7 +11,7 @@ namespace Modulo_Hash
 {
     public class Basico
     {
-        #region<primer exportacion>
+        #region<primer exportacion para los cambios>
 
         #endregion<>
 
