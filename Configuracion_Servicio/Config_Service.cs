@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceProcess;
 using System.ServiceModel.Configuration;
+using System.IO;
+
 namespace Configuracion_Servicio
 {
     public partial class Config_Service : Form
@@ -104,8 +106,17 @@ namespace Configuracion_Servicio
         {
             try
             {
+                String ruta_service_config_RET = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml_RET.exe.config";
+                //if (File.Exists(ruta_service_config_RET))
+                //{
 
-                System.Configuration.Configuration wConfig = System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml.exe.config" }, System.Configuration.ConfigurationUserLevel.None);
+                //}
+                //else
+                //{
+                //    wConfig = System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml.exe.config" }, System.Configuration.ConfigurationUserLevel.None);
+                //}
+
+                System.Configuration.Configuration wConfig = (!File.Exists(ruta_service_config_RET)) ?System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml.exe.config" }, System.Configuration.ConfigurationUserLevel.None):System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml_RET.exe.config" }, System.Configuration.ConfigurationUserLevel.None);
                 wConfig.AppSettings.Settings.Remove("Proceso");
                 wConfig.AppSettings.Settings.Add("Proceso",destino);                
                 wConfig.Save(System.Configuration.ConfigurationSaveMode.Modified);
@@ -135,7 +146,10 @@ namespace Configuracion_Servicio
             try
             {
 
-                System.Configuration.Configuration wConfig = System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml.exe.config" }, System.Configuration.ConfigurationUserLevel.None);
+                String ruta_service_config_RET = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml_RET.exe.config";
+
+
+                System.Configuration.Configuration wConfig = (!File.Exists(ruta_service_config_RET)) ? System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml.exe.config" }, System.Configuration.ConfigurationUserLevel.None) : System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new System.Configuration.ExeConfigurationFileMap { ExeConfigFilename = @"D:\INTERFA\CARVAJAL\bata_proceso\Genera_Hash_Xml_RET.exe.config" }, System.Configuration.ConfigurationUserLevel.None);
                 ServiceModelSectionGroup wServiceSection = ServiceModelSectionGroup.GetSectionGroup(wConfig);
 
                 ClientSection wClientSection = wServiceSection.Client;

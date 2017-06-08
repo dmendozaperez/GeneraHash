@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Mapa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Nombre="RETENCION_STD10" IdTipoMapa="1" TipoArchivo="1" IdEsquema="3" Activo="true">
+	<ParsingData>
+		<Texto AnchoFijo="false" IgnorarEspacios="true" CharAperturaCampo="" CharCierreCampo="">
+			<Registros>
+				<Registro Prefijo="ENC" Nombre="ENCABEZADO" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="1" PrefijoPadre="" EsItem="false">
+					<Campos>
+						<Campo Prefijo="ENC" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>ENC</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="CDP_TIPO" Visible="true">
+							<Valor>
+								<string>CRE</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="EMPRESA_COMPRADORA" Visible="true">
+							<Valor>
+								<string>17100034065001</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="EMPRESA_PROVEEDORA" Visible="true">
+							<Valor>
+								<string>16200045076002</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="TIPO_ACCION_COMPROBANTE" Visible="true">
+							<Valor>
+								<string>0</string>
+								<string>1</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="MOTIVO_BAJA" Visible="true">
+							<Valor>
+								<string>Descripción del motivo por el cual se revierte el comprobante de retención electrónico de hasta 100 caracteres.</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="NUMERO_DOCUMENTO" Visible="true">
+							<Valor>
+								<string>0000000000001</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="FECHA_EMISION" Visible="true">
+							<Valor>
+								<string>2016-02-18</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="NUMERO_RESOLUCION" Visible="true">
+							<Valor>
+								<string>N. 357 -2015/SUNAT</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="CODIGO_PLANTILLA" Visible="true">
+							<Valor>
+								<string>PXP-FAEX01</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="CANTIDAD_COPIAS" Visible="true">
+							<Valor>
+								<string>3</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="CODIGO_IMPRESORA" Visible="true">
+							<Valor>
+								<string>imp2</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="CORREO_ELECTRONICO" Visible="true">
+							<Valor>
+								<string>juan.perez@carvajal.com;natalia.bolivar@carvajal.com;marcela.rios@carvajal.com</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="CODIGO_NOTA" Visible="true">
+							<Valor>
+								<string>0020</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="ENC" Nombre="IMPORTE_TOTAL_LETRAS" Visible="true">
+							<Valor>
+								<string>CIENTO VEINTIDOS SOLES CON CINCUENTA Y CINCO CENTAVOS</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="EMI" Nombre="INFORMACIÓN DEL EMISOR ELECTRÓNICO DEL DOCUMENTO" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="1" PrefijoPadre="ENC" EsItem="false">
+					<Campos>
+						<Campo Prefijo="EMI" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>EMI</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="DOCUMENTO_IDENTIFICACION" Visible="true">
+							<Valor>
+								<string>11223344556</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="TIPO_IDENTIFICACION" Visible="true">
+							<Valor>
+								<string>6</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="NOMBRE" Visible="true">
+							<Valor>
+								<string>Luis Alberto Gomez Bolaños</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="NOMBRE_COMERCIAL" Visible="true">
+							<Valor>
+								<string>Electricos S.A</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="CODIGO_UBICACION" Visible="true">
+							<Valor>
+								<string>010104</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="DIRECCION" Visible="true">
+							<Valor>
+								<string>calle 14 #23 - 12</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="URBANIZACION" Visible="true">
+							<Valor>
+								<string>Los robles</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="PROVINCIA" Visible="true">
+							<Valor>
+								<string>Bagua</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="DEPARTAMENTO" Visible="true">
+							<Valor>
+								<string>Amazonas</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="DISTRITO" Visible="true">
+							<Valor>
+								<string>Distrito de Chiliquín</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="EMI" Nombre="CODIGO_POSTAL" Visible="true">
+							<Valor>
+								<string>PE</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="PRO" Nombre="INFORMACIÓN DEL PROVEEDOR" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="1" PrefijoPadre="ENC" EsItem="false">
+					<Campos>
+						<Campo Prefijo="PRO" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>PRO</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="DOCUMENTO_IDENTIFICACION" Visible="true">
+							<Valor>
+								<string>11555544556</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="TIPO_IDENTIFICACION" Visible="true">
+							<Valor>
+								<string>6</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="NOMBRE" Visible="true">
+							<Valor>
+								<string>Martin Robledo</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="NOMBRE_COMERCIAL" Visible="true">
+							<Valor>
+								<string>Seguridad S.A</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="CODIGO_UBICACION" Visible="true">
+							<Valor>
+								<string>010105</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="DIRECCION" Visible="true">
+							<Valor>
+								<string>calle 16 #23 - 28</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="URBANIZACION" Visible="true">
+							<Valor>
+								<string>Los robles</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="PROVINCIA" Visible="true">
+							<Valor>
+								<string>Bagua</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="DEPARTAMENTO" Visible="true">
+							<Valor>
+								<string>Amazonas</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="DISTRITO" Visible="true">
+							<Valor>
+								<string>Distrito de Chiliquín</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PRO" Nombre="CODIGO_POSTAL" Visible="true">
+							<Valor>
+								<string>PE</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="DAT" Nombre="DATOS DE LA RETENCIÒN DEL COMPROBANTE" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="1" PrefijoPadre="ENC" EsItem="false">
+					<Campos>
+						<Campo Prefijo="DAT" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>DAT</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="REGIMEN_RETENCION" Visible="true">
+							<Valor>
+								<string>01</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="TASA_RETENCION" Visible="true">
+							<Valor>
+								<string>1.00</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="IMPORTE_TOTAL_RETENIDO" Visible="true">
+							<Valor>
+								<string>123456789101.22</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="MONEDA_IMPORTE" Visible="true">
+							<Valor>
+								<string>PEN</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="IMPORTE_TOTAL_PAGADO" Visible="true">
+							<Valor>
+								<string>123456789101.12</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="MONEDA_IMPORTE_PAGADO" Visible="true">
+							<Valor>
+								<string>PEN</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DAT" Nombre="OBSERVACIONES" Visible="true">
+							<Valor>
+								<string>observaciones hasta 250 caracteres</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="CRE" Nombre="DATOS DEL COMPROBANTE RELACIONADO" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="999" PrefijoPadre="ENC" EsItem="false">
+					<Campos>
+						<Campo Prefijo="CRE" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>CRE</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="CRE" Nombre="TIPO_DOCUMENTO" Visible="true">
+							<Valor>
+								<string>01</string>
+								<string>07</string>
+								<string>08</string>
+								<string>12</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="CRE" Nombre="NUMERO_DOCUMENTO" Visible="true">
+							<Valor>
+								<string>E001564251</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="CRE" Nombre="FECHA_EMISION" Visible="true">
+							<Valor>
+								<string>2016-02-17</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="CRE" Nombre="IMPORTE_TOTAL" Visible="true">
+							<Valor>
+								<string>123456789101.12</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="CRE" Nombre="CODIGO_MONEDA" Visible="true">
+							<Valor>
+								<string>COP</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="PAG" Nombre="DATOS DEL PAGO" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="999" PrefijoPadre="CRE" EsItem="false">
+					<Campos>
+						<Campo Prefijo="PAG" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>PAG</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PAG" Nombre="FECHA_PAGO" Visible="true">
+							<Valor>
+								<string>2016-02-18</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PAG" Nombre="NUMERO_PAGO" Visible="true">
+							<Valor>
+								<string>123456789</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PAG" Nombre="IMPORTE_PAGO" Visible="true">
+							<Valor>
+								<string>111234567898.00</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="PAG" Nombre="CODIGO_MONEDA" Visible="true">
+							<Valor>
+								<string>COP</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="DRE" Nombre="DATOS DE LA RETENCIÓN" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="1" MaxOccurs="999" PrefijoPadre="CRE" EsItem="false">
+					<Campos>
+						<Campo Prefijo="DRE" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>DRE</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DRE" Nombre="IMPORTE_RETENIDO" Visible="true">
+							<Valor>
+								<string>123456789101.12</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DRE" Nombre="CODIGO_MONEDA" Visible="true">
+							<Valor>
+								<string>PEN</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DRE" Nombre="FECHA_RETENCION" Visible="true">
+							<Valor>
+								<string>2016-02-18</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DRE" Nombre="IMPORTE_TOTAL" Visible="true">
+							<Valor>
+								<string>123456789101.23</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="DRE" Nombre="CODIGO_MONEDA_TOTAL" Visible="true">
+							<Valor>
+								<string>PEN</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+				<Registro Prefijo="TCA" Nombre="TIPO DE CAMBIO" Separador="," CharAperturaCampo="" CharCierreCampo="" MinOccurs="0" MaxOccurs="999" PrefijoPadre="CRE" EsItem="false">
+					<Campos>
+						<Campo Prefijo="TCA" Nombre="ID_REGISTRO" Visible="true">
+							<Valor>
+								<string>TCA</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="TCA" Nombre="CODIGO_MONEDA" Visible="true">
+							<Valor>
+								<string>COP</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="TCA" Nombre="CODIGO_MONEDA_OBJETIVO" Visible="true">
+							<Valor>
+								<string>PEN</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="TCA" Nombre="VALOR_CAMBIO" Visible="true">
+							<Valor>
+								<string>1234.123456</string>
+							</Valor>
+						</Campo>
+						<Campo Prefijo="TCA" Nombre="FECHA_CAMBIO" Visible="true">
+							<Valor>
+								<string>2016-02-18</string>
+							</Valor>
+						</Campo>
+					</Campos>
+					<Longitud xsi:nil="true" />
+					<Ejemplo />
+				</Registro>
+			</Registros>
+			<FileNameEjemplo/>
+			<FileContentsEjemplo>
+				<string>ENC,CRE,281020132802194,199402281301209,0,El motivo de baja es de hasta 100 caracteres,0000000000001,2016-01-19,N. 357 -2015/SUNAT,PXP-FAEX01,3,imp2,juan.perez@carvajal.com;natalia.bolivar@carvajal.com;marcela.rios@carvajal.com;liliana.ferrer@carvajal.com;william.soto@carvajal.com</string>
+				<string>EMI,11223344556,6,Jose Antonio Piedrahita,Servicio Electrico S.A,010104,calle 12 #15-64,Los Robles,Bagua,Amazonas,Distrito de Chiquilin,PE</string>
+				<string>PRO,65544332211,6,Marcos Galindo,Seguridad S.A,010105,calle 15 # 15-65,Manantial,Bagua,Amazonas,Distrito de Chiquilin,PE</string>
+				<string>DAT,01,1.15,321654987102.28,PEN,147258369012.94,PEN,Estas son las Observaciones </string>
+				<string>CRE,01,E001548256,2016-01-13,123456789101.12,COP</string>
+				<string>PAG,2016-01-28,000000001,121314151617.12,COP</string>
+				<string>DRE,321654987102.28,PEN,2015-02-01,147258369012.94,PEN</string>
+				<string>TCA,3400.512546,2016-02-17</string>
+			</FileContentsEjemplo>
+		</Texto>
+	</ParsingData>
+	<Mapeos>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="CDP_TIPO" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="CDP_TIPO" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="EMPRESA_COMPRADORA" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="EMPRESA_COMPRADORA" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="EMPRESA_PROVEEDORA" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="EMPRESA_PROVEEDORA" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="TIPO_ACCION_COMPROBANTE" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="TIPO_ACCION_COMPROBANTE" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="MOTIVO_BAJA" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="MOTIVO_BAJA" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="NUMERO_DOCUMENTO" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="NUMERO_DOCUMENTO" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="FECHA_EMISION" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="FECHA_EMISION" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="NUMERO_RESOLUCION" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="NUMERO_RESOLUCION" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="CODIGO_PLANTILLA" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="CODIGO_PLANTILLA" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="CANTIDAD_COPIAS" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="CANTIDAD_COPIAS" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="CODIGO_IMPRESORA" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="CODIGO_IMPRESORA" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="CORREO_ELECTRONICO" />
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="CORREO_ELECTRONICO" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="CODIGO_NOTA" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="CODIGO_NOTA" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="ENC" Nombre="IMPORTE_TOTAL_LETRAS" />
+			</InFields>
+			<OutField Prefijo="HEADER" Nombre="IMPORTE_TOTAL_LETRAS" />
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="DOCUMENTO_IDENTIFICACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="DOCUMENTO_IDENTIFICACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="TIPO_IDENTIFICACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="TIPO_IDENTIFICACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="NOMBRE"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="NOMBRE"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="NOMBRE_COMERCIAL"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="NOMBRE_COMERCIAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="CODIGO_UBICACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="CODIGO_UBICACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="DIRECCION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="DIRECCION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="URBANIZACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="URBANIZACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="PROVINCIA"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="PROVINCIA"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="DEPARTAMENTO"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="DEPARTAMENTO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="DISTRITO"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="DISTRITO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="EMI" Nombre="CODIGO_POSTAL"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_EMISOR" Nombre="CODIGO_POSTAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="DOCUMENTO_IDENTIFICACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="DOCUMENTO_IDENTIFICACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="TIPO_IDENTIFICACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="TIPO_IDENTIFICACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="NOMBRE"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="NOMBRE"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="NOMBRE_COMERCIAL"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="NOMBRE_COMERCIAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="CODIGO_UBICACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="CODIGO_UBICACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="DIRECCION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="DIRECCION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="URBANIZACION"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="URBANIZACION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="PROVINCIA"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="PROVINCIA"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="DEPARTAMENTO"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="DEPARTAMENTO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="DISTRITO"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="DISTRITO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PRO" Nombre="CODIGO_POSTAL"/>
+			</InFields>
+			<OutField Prefijo="INFORMACION_PROVEEDOR" Nombre="CODIGO_POSTAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="REGIMEN_RETENCION"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="REGIMEN_RETENCION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="TASA_RETENCION"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="TASA_RETENCION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="IMPORTE_TOTAL_RETENIDO"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="IMPORTE_TOTAL_RETENIDO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="MONEDA_IMPORTE"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="MONEDA_IMPORTE"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="IMPORTE_TOTAL_PAGADO"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="IMPORTE_TOTAL_PAGADO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="MONEDA_IMPORTE_PAGADO"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="MONEDA_IMPORTE_PAGADO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DAT" Nombre="OBSERVACIONES"/>
+			</InFields>
+			<OutField Prefijo="RETENCION_COMPROBANTE" Nombre="OBSERVACIONES"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="CRE" Nombre="TIPO_DOCUMENTO"/>
+			</InFields>
+			<OutField Prefijo="COMPROBANTE_RELACIONADO" Nombre="TIPO_DOCUMENTO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="CRE" Nombre="NUMERO_DOCUMENTO"/>
+			</InFields>
+			<OutField Prefijo="COMPROBANTE_RELACIONADO" Nombre="NUMERO_DOCUMENTO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="CRE" Nombre="FECHA_EMISION"/>
+			</InFields>
+			<OutField Prefijo="COMPROBANTE_RELACIONADO" Nombre="FECHA_EMISION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="CRE" Nombre="IMPORTE_TOTAL"/>
+			</InFields>
+			<OutField Prefijo="COMPROBANTE_RELACIONADO" Nombre="IMPORTE_TOTAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="CRE" Nombre="CODIGO_MONEDA"/>
+			</InFields>
+			<OutField Prefijo="COMPROBANTE_RELACIONADO" Nombre="CODIGO_MONEDA"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PAG" Nombre="FECHA_PAGO"/>
+			</InFields>
+			<OutField Prefijo="PAGO" Nombre="FECHA_PAGO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PAG" Nombre="NUMERO_PAGO"/>
+			</InFields>
+			<OutField Prefijo="PAGO" Nombre="NUMERO_PAGO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PAG" Nombre="IMPORTE_PAGO"/>
+			</InFields>
+			<OutField Prefijo="PAGO" Nombre="IMPORTE_PAGO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="PAG" Nombre="CODIGO_MONEDA"/>
+			</InFields>
+			<OutField Prefijo="PAGO" Nombre="CODIGO_MONEDA"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DRE" Nombre="IMPORTE_RETENIDO"/>
+			</InFields>
+			<OutField Prefijo="RETENCION" Nombre="IMPORTE_RETENIDO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DRE" Nombre="CODIGO_MONEDA"/>
+			</InFields>
+			<OutField Prefijo="RETENCION" Nombre="CODIGO_MONEDA"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DRE" Nombre="FECHA_RETENCION"/>
+			</InFields>
+			<OutField Prefijo="RETENCION" Nombre="FECHA_RETENCION"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DRE" Nombre="IMPORTE_TOTAL"/>
+			</InFields>
+			<OutField Prefijo="RETENCION" Nombre="IMPORTE_TOTAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="DRE" Nombre="CODIGO_MONEDA_TOTAL"/>
+			</InFields>
+			<OutField Prefijo="RETENCION" Nombre="CODIGO_MONEDA_TOTAL"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="TCA" Nombre="CODIGO_MONEDA"/>
+			</InFields>
+			<OutField Prefijo="TIPO_CAMBIO" Nombre="CODIGO_MONEDA"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="TCA" Nombre="CODIGO_MONEDA_OBJETIVO"/>
+			</InFields>
+			<OutField Prefijo="TIPO_CAMBIO" Nombre="CODIGO_MONEDA_OBJETIVO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="TCA" Nombre="VALOR_CAMBIO"/>
+			</InFields>
+			<OutField Prefijo="TIPO_CAMBIO" Nombre="VALOR_CAMBIO"/>
+		</Mapeo>
+		<Mapeo>
+			<InFields>
+				<CampoID Prefijo="TCA" Nombre="FECHA_CAMBIO"/>
+			</InFields>
+			<OutField Prefijo="TIPO_CAMBIO" Nombre="FECHA_CAMBIO"/>
+		</Mapeo>
+	</Mapeos>
+	<PreprocessJS>
+		var l=origen.split('\r\n'); 
+		var c=l[0].split(','); 
+		l[0]=c.join(',');  
+		var x=l.join('\r\n'); x;
+	</PreprocessJS>
+</Mapa>

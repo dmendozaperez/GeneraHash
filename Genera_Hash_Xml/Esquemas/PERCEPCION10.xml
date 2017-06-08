@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!--Title: Esquema de Comprobante de percepción electronico Version: 1.0Date: 2016-02-17-->
+<ArrayOfCampoSUNAT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CampoSUNAT Id="100" Seccion="HEADER" Condicion="M" Format="an..3" SUNAT_format="" Campo="CDP_TIPO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Tipo de documento: Comprobante de percepción electrónico</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="101" Seccion="HEADER" Condicion="M" Format="an..15" SUNAT_format="" Campo="EMPRESA_COMPRADORA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Identificación de la empresa Compradora (RUC)</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="102" Seccion="HEADER" Condicion="M" Format="an..15" SUNAT_format="" Campo="EMPRESA_PROVEEDORA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Identificación de la empresa Proveedora (RUC)</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="103" Seccion="HEADER" Condicion="M" Format="an..1" SUNAT_format="bool" Campo="TIPO_ACCION_COMPROBANTE" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Tipo de acción para el comprobante de percepción electrónico: 0 Comprobante de percepción electrónico emitido (no es una reversiòn), 1 Comprobante de percepción electrónico revertido (emitido y anulado)</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="104" Seccion="HEADER" Condicion="O" Format="an..100" SUNAT_format="" Campo="MOTIVO_BAJA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Motivo por el cual se revierte el comprobante de percepción electrónico.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="105" Seccion="HEADER" Condicion="M" Format="an..13" SUNAT_format="" Campo="NUMERO_DOCUMENTO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Numero único asignado al documento por el emisor (Conformada por numero y serie correlativo del comprobante de percepción electrónico).</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="106" Seccion="HEADER" Condicion="M" Format="an..10" SUNAT_format="AAAA-MM-DD" Campo="FECHA_EMISION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Fecha de emisión del comprobante de percepción electrónico. Formato AAAA-MM-DD</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="107" Seccion="HEADER" Condicion="M" Format="an..25" SUNAT_format="" Campo="NUMERO_RESOLUCION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Número de la resolución emitida por la SUNAT para el emisor del comprobante de percepción electrónico</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="108" Seccion="HEADER" Condicion="O" Format="an..10" SUNAT_format="" Campo="CODIGO_PLANTILLA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de la plantilla que aplica para el comprobante de percepción.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="109" Seccion="HEADER" Condicion="O" Format="n..5" SUNAT_format="" Campo="CANTIDAD_COPIAS" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Cantidad de copias del PDF a imprimir.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="110" Seccion="HEADER" Condicion="O" Format="an..5" SUNAT_format="" Campo="CODIGO_IMPRESORA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de la Impresora, donde se imprimirá el comprobante de percepción.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="111" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..1280" SUNAT_format="" Campo="CORREO_ELECTRONICO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Correo electrónico para enviar la notificación al receptor del recibo de un comprobante de percepción.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="112" Seccion="HEADER" Condicion="O" Format="an..4" SUNAT_format="" Campo="CODIGO_NOTA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Codigo de la nota.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="113" Seccion="HEADER" Condicion="O" Format="an..100" SUNAT_format="" Campo="IMPORTE_TOTAL_LETRAS" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe total retenido en letras</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="200" Seccion="INFORMACION_EMISOR" Condicion="M" Format="n..11" SUNAT_format="" Campo="DOCUMENTO_IDENTIFICACION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Número de documento de identificación.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="201" Seccion="INFORMACION_EMISOR" Condicion="M" Format="an..1" SUNAT_format="" Campo="TIPO_IDENTIFICACION" Valor="6">
+		<Grupo>0</Grupo>
+		<Descripcion>Tipo de documento de identificación:RUC</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="202" Seccion="INFORMACION_EMISOR" Condicion="M" Format="an..100" SUNAT_format="" Campo="NOMBRE" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Apellidos y nombres, denominación o Razón social</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="203" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..100" SUNAT_format="" Campo="NOMBRE_COMERCIAL" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre comercial</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="204" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..6" SUNAT_format="" Campo="CODIGO_UBICACION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de ubicación geográfica (UBIGEO). Acorde al Catálogo de Ubigeos del INEI.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="205" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..100" SUNAT_format="" Campo="DIRECCION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Dirección completa del emisor electrónico del documento</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="206" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..30" SUNAT_format="" Campo="URBANIZACION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre de la Urbanización del emisor electrónico del documento.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="207" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..30" SUNAT_format="" Campo="PROVINCIA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre de la Provincia del emisor electrónico del documento.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="208" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..30" SUNAT_format="" Campo="DEPARTAMENTO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre del Departamento del emisor electrónico del documento.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="209" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..30" SUNAT_format="" Campo="DISTRITO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre del Distrito del emisor electrónico del documento.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="210" Seccion="INFORMACION_EMISOR" Condicion="O" Format="an..2" SUNAT_format="" Campo="CODIGO_POSTAL" Valor="PE">
+		<Grupo>0</Grupo>
+		<Descripcion>Código postal del país del domicilio fiscal.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="300" Seccion="INFORMACION_CLIENTE" Condicion="M" Format="n..11" SUNAT_format="" Campo="DOCUMENTO_IDENTIFICACION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Número de documento de identificación.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="301" Seccion="INFORMACION_CLIENTE" Condicion="M" Format="an..1" SUNAT_format="" Campo="TIPO_IDENTIFICACION" Valor="6">
+		<Grupo>0</Grupo>
+		<Descripcion>Tipo de documento de identificación: 1 Documento Nacional de identidad (DNI), 6 RUC</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="302" Seccion="INFORMACION_CLIENTE" Condicion="M" Format="an..100" SUNAT_format="" Campo="NOMBRE" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Apellidos y nombres, denominación o Razón social</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="303" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..100" SUNAT_format="" Campo="NOMBRE_COMERCIAL" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre comercial</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="304" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..6" SUNAT_format="" Campo="CODIGO_UBICACION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de ubicación geográfica (UBIGEO). Acorde al Catálogo de Ubigeos del INEI.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="305" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..100" SUNAT_format="" Campo="DIRECCION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Dirección completa del Proveedor.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="306" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..30" SUNAT_format="" Campo="URBANIZACION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre de la Urbanización del Proveedor.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="307" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..30" SUNAT_format="" Campo="PROVINCIA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre de la Provincia del Proveedor.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="308" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..30" SUNAT_format="" Campo="DEPARTAMENTO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre del Departamento del Proveedor.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="309" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..30" SUNAT_format="" Campo="DISTRITO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Nombre del Distrito del Proveedor.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="310" Seccion="INFORMACION_CLIENTE" Condicion="O" Format="an..2" SUNAT_format="" Campo="CODIGO_POSTAL" Valor="PE">
+		<Grupo>0</Grupo>
+		<Descripcion>Código postal del país del domicilio fiscal.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="400" Seccion="PERCEPCION_COMPROBANTE" Condicion="M" Format="n..2" SUNAT_format="" Campo="REGIMEN_PERCEPCION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Régimen de percepción: 01 percepción de venta interna Tasa 2%, 02 Percepción a la adquisición de combustible Tasa 1%, 03 Percepción realizada al agente con percepción tasa especial Tasa 0.5%</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="401" Seccion="PERCEPCION_COMPROBANTE" Condicion="M" Format="an..4" SUNAT_format="n(1,2)" Campo="TASA_PERCEPCION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Valor de la tasa de percepción</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="402" Seccion="PERCEPCION_COMPROBANTE" Condicion="M" Format="an..15" SUNAT_format="n(12,2)" Campo="IMPORTE_TOTAL_PERCIBIDO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe total percibido del comprobante de percepción.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="403" Seccion="PERCEPCION_COMPROBANTE" Condicion="M" Format="an..3" SUNAT_format="" Campo="MONEDA_IMPORTE_TOTAL" Valor="PEN">
+		<Grupo>0</Grupo>
+		<Descripcion>Moneda del importe total percibido. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="404" Seccion="PERCEPCION_COMPROBANTE" Condicion="M" Format="an..15" SUNAT_format="n(12,2)" Campo="IMPORTE_TOTAL_COBRADO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe total cobrado del comprobante de percepción.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="405" Seccion="PERCEPCION_COMPROBANTE" Condicion="M" Format="an..3" SUNAT_format="" Campo="MONEDA_IMPORTE_COBRADO" Valor="PEN">
+		<Grupo>0</Grupo>
+		<Descripcion>Moneda del importe total cobrado. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="406" Seccion="PERCEPCION_COMPROBANTE" Condicion="O" Format="an..250" SUNAT_format="" Campo="OBSERVACIONES" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Observaciones</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="500" Seccion="COMPROBANTE_RELACIONADO_ITEM" Condicion="M" Format="an..2" SUNAT_format="" Campo="TIPO_DOCUMENTO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Tipo de documento relacionado: 01 Factura, 03 Boleta de venta, 07 Nota de Crédito, 08 Nota de Debito, 12 Ticket de maquina registradora.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="501" Seccion="COMPROBANTE_RELACIONADO_ITEM" Condicion="M" Format="an..20" SUNAT_format="" Campo="NUMERO_DOCUMENTO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Número del documento relacionado (compuesto por la Serie y Número).</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="502" Seccion="COMPROBANTE_RELACIONADO_ITEM" Condicion="M" Format="an..10" SUNAT_format="AAAA-MM-DD" Campo="FECHA_EMISION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Fecha de emisión del documento relacionado. Formato AAAA-MM-DD(La fecha debe ser menor o igual a la fecha actual)</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="503" Seccion="COMPROBANTE_RELACIONADO_ITEM" Condicion="M" Format="an..15" SUNAT_format="n(12,2)" Campo="IMPORTE_TOTAL" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe total del documento relacionado.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="504" Seccion="COMPROBANTE_RELACIONADO_ITEM" Condicion="M" Format="an..3" SUNAT_format="" Campo="CODIGO_MONEDA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de la moneda del importe total relacionado. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="600" Seccion="COBRO" Condicion="M" Format="an..10" SUNAT_format="AAAA-MM-DD" Campo="FECHA_COBRO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Fecha de cobro.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="601" Seccion="COBRO" Condicion="M" Format="n..9" SUNAT_format="" Campo="NUMERO_COBRO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Número de cobro</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="602" Seccion="COBRO" Condicion="M" Format="an..15" SUNAT_format="n(12,2)" Campo="IMPORTE_COBRO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe del cobro sin percepción.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="603" Seccion="COBRO" Condicion="M" Format="an..3" SUNAT_format="" Campo="CODIGO_MONEDA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de la moneda de cobro. Acorde a ISO 4217 Alpha Versión 2001.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="700" Seccion="PERCEPCION" Condicion="M" Format="an..15" SUNAT_format="n(12,2)" Campo="IMPORTE_PERCIBIDO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe percibido.</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="701" Seccion="PERCEPCION" Condicion="M" Format="an..3" SUNAT_format="" Campo="CODIGO_MONEDA_PERCIBIDO" Valor="PEN">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de la moneda del importe percibido. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="702" Seccion="PERCEPCION" Condicion="M" Format="an..10" SUNAT_format="AAAA-MM-DD" Campo="FECHA_PERCEPCION" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Fecha de percepción. Formato AAAA-MM-DD</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="703" Seccion="PERCEPCION" Condicion="M" Format="an..15" SUNAT_format="n(12,2)" Campo="IMPORTE_TOTAL" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Importe total a cobrar (Neto).</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="704" Seccion="PERCEPCION" Condicion="M" Format="an..3" SUNAT_format="" Campo="CODIGO_MONEDA_TOTAL" Valor="PEN">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de la moneda del monto total a cobrar. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="800" Seccion="TIPO_CAMBIO" Condicion="O" Format="an..3" SUNAT_format="" Campo="CODIGO_MONEDA" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de moneda para el tipo de cambio. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="801" Seccion="TIPO_CAMBIO" Condicion="O" Format="an..3" SUNAT_format="" Campo="CODIGO_MONEDA_OBJETIVO" Valor="PEN">
+		<Grupo>0</Grupo>
+		<Descripcion>Código de moneda objetivo para la tasa de cambio. Acorde a ISO 4217 Alpha Versión 2001</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="802" Seccion="TIPO_CAMBIO" Condicion="O" Format="an..11" SUNAT_format="n(4,6)" Campo="VALOR_CAMBIO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Valor aplicado al tipo de cambio</Descripcion>
+	</CampoSUNAT>
+	<CampoSUNAT Id="80" Seccion="TIPO_CAMBIO" Condicion="O" Format="an..10" SUNAT_format="" Campo="FECHA_CAMBIO" Valor="*">
+		<Grupo>0</Grupo>
+		<Descripcion>Fecha de cambio. Formato AAAA-MM-DD</Descripcion>
+	</CampoSUNAT>
+</ArrayOfCampoSUNAT>
