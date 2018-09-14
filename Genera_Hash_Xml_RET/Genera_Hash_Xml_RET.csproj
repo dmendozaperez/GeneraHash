@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Certificado\CDBATA.pfx" />
+    <None Include="Certificado\CDBATA1.pfx" />
     <None Include="Service References\ServiceBata\ws_bata.wsdl" />
   </ItemGroup>
   <ItemGroup>

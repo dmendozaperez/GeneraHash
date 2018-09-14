@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
-<!--Title: Esquema de Notas de Crédito y Notas de DébitoVersion: 1.0Date: 2014-05-07-->
+<!--
+Title: Esquema de Notas de Crédito y Notas de Débito
+Version: 3.0.0
+Date: 2015-09-11
+-->
 <ArrayOfCampoSUNAT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CampoSUNAT Id="100" Seccion="HEADER" Condicion="M" Format="n1" SUNAT_format="bool" Campo="ES_BAJA" Valor="*">
     <Grupo>0</Grupo>
@@ -125,6 +129,14 @@
   <CampoSUNAT Id="2040" Seccion="HEADER" Condicion="C" Format="an..15" SUNAT_format="n(12,2)" Campo="VALOR_TOTAL_DESCUENTOS" Valor="*">
     <Grupo>10</Grupo>
     <Descripcion>Valor total descuentos</Descripcion>
+  </CampoSUNAT>
+  <CampoSUNAT Id="2041" Seccion="HEADER" Condicion="C" Format="an..18" SUNAT_format="n(15,2)" Campo="TOTAL_ANTICIPOS" Valor="*">
+    <Grupo>10</Grupo>
+    <Descripcion>Total Anticipos</Descripcion>
+  </CampoSUNAT>
+  <CampoSUNAT Id="2042" Seccion="HEADER" Condicion="C" Format="an..3" SUNAT_format="" Campo="TOTAL_ANTICIPOS_MONEDA" Valor="*">
+    <Grupo>10</Grupo>
+    <Descripcion>Total Anticipos Moneda</Descripcion>
   </CampoSUNAT>
   <CampoSUNAT Id="2045" Seccion="HEADER" Condicion="C" Format="an..3" SUNAT_format="" Campo="MONEDA" Valor="*">
     <Grupo>1</Grupo>
@@ -326,7 +338,7 @@
     <Grupo>23</Grupo>
     <Descripcion>Atributo Moneda</Descripcion>
   </CampoSUNAT>
-  <CampoSUNAT Id="6100" Seccion="ITEMS" Condicion="M" Format="n..5" SUNAT_format="" Campo="NUMERO" Valor="1">
+  <CampoSUNAT Id="6100" Seccion="ITEMS" Condicion="M" Format="n..3" SUNAT_format="" Campo="NUMERO" Valor="1">
     <Grupo>34</Grupo>
     <Descripcion>Número de orden del Ítem</Descripcion>
   </CampoSUNAT>

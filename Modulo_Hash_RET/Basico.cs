@@ -326,7 +326,10 @@ namespace Modulo_Hash_RET
                         break;
                     case "RE":
                         _ingreso = 1;
-                        _codigo_hash = generator_cdp.GetHashForRetentionCdp(_formato_doc);
+                        _codigo_hash = envio_paperless(@_archivo);
+                        /*envia al server 28 */
+                        //_codigo_hash = generator_cdp.GetHashForRetentionCdp(_formato_doc);
+
                         break;
                 }
 
@@ -389,5 +392,38 @@ namespace Modulo_Hash_RET
         }
         #endregion
 
+        #region<ENVIO A PAPERLESS RETENCION>
+        private static string envio_paperless(string archivo)
+        {
+            string error = "";
+            try
+            {
+                string _nombrearchivo_txt = System.IO.Path.GetFileNameWithoutExtension(@archivo);
+                string ruta_envio = @"\\10.10.10.28\IN\Retencion";
+                string user = "Administrator";
+                string password = "adminBata.";
+                NetworkShare.ConnectToShare(ruta_envio, user, password);
+
+                string file_destino = ruta_envio + "\\" + _nombrearchivo_txt + ".txt";
+
+
+                File.Copy(archivo, file_destino,true);
+
+                if (File.Exists(@file_destino))
+                {
+                    File.Delete(archivo);
+                }
+                
+
+               
+
+            }
+            catch (Exception exc)
+            {
+                error = exc.Message;                
+            }
+            return error;
+        }
+        #endregion
     }
 }

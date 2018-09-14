@@ -30,9 +30,13 @@ namespace Generacion_Hash
            //Modulo_Hash.Basico.CambiaServidor("http://148.102.50.44/web_site_electronica/ws_bata.asmx");
             string _error = "";
 
-//            Modulo_Hash_RET.Basico._envia_xml(ref _error);
+            //            Modulo_Hash_RET.Basico._envia_xml(ref _error);
 
-           Modulo_Hash.Basico._ejecuta_proceso(ref _error);
+            Modulo_Hash.Basico._ejecuta_proceso(ref _error);
+
+            //Modulo_Hash.Basico.ejecuta_impresion_qr(ref _error);
+
+            MessageBox.Show("ok");
         }
     }
 }

@@ -7,6 +7,9 @@ using Carvajal.FEPE.PreSC.Core;
 using System.IO;
 using System.ServiceModel.Configuration;
 using System.Configuration;
+using System.Text.RegularExpressions;
+using System.Drawing;
+
 namespace Modulo_Hash
 {
     public class Basico
@@ -504,6 +507,329 @@ namespace Modulo_Hash
             //    cee.Address = new Uri(urlFinal);
             //}
             //MessageBox.Show("El Servidor de Datos Ha Cambiado tiene que Cerrar el Sistema para que los cambios surtan efecto."); config.Save();
+        }
+        #endregion
+
+        #region<generacion e impresion de Codigo QR>
+
+        private static string impresora_tda = "Ticket";
+
+        /// <summary>
+        /// genera codigo QR en bytes
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="_error"></param>
+        private static byte[] generaQR(string str)
+        {
+            byte[] QR = null;
+            try
+            {
+                GeneratorCdp genqr = new GeneratorCdp();
+
+                QR = genqr.GetImageQrCodeFromString(str);
+
+            }
+            catch
+            {
+                QR = null;                
+            }
+            return QR;
+        }
+        public static void ejecuta_impresion_qr(ref string _error)
+        {
+            string _ruta_in_boleta_qr = "D:\\INTERFA\\CARVAJAL\\IN\\Boletas\\QR";
+            string _ruta_in_factura_qr = "D:\\INTERFA\\CARVAJAL\\IN\\Facturas\\QR";
+            string _ruta_in_credito_qr = "D:\\INTERFA\\CARVAJAL\\IN\\creditos\\QR";
+            string _ruta_in_debito_qr = "D:\\INTERFA\\CARVAJAL\\IN\\debitos\\QR";            
+            string _carpeta_in = "";
+            try
+            {
+                if (!Directory.Exists(@_ruta_in_boleta_qr))
+                {
+                    Directory.CreateDirectory(@_ruta_in_boleta_qr);
+                }
+                if (!Directory.Exists(@_ruta_in_factura_qr))
+                {
+                    Directory.CreateDirectory(@_ruta_in_factura_qr);
+                }
+                if (!Directory.Exists(@_ruta_in_credito_qr))
+                {
+                    Directory.CreateDirectory(@_ruta_in_credito_qr);
+                }
+                if (!Directory.Exists(@_ruta_in_debito_qr))
+                {
+                    Directory.CreateDirectory(@_ruta_in_debito_qr);
+                }
+
+                string[] _rutas_in = { _ruta_in_boleta_qr, _ruta_in_factura_qr, _ruta_in_credito_qr, _ruta_in_debito_qr };
+
+                //***********************************
+                for (Int32 i = 0; i < _rutas_in.Length; ++i)
+                {
+                    string _tipo_doc = "";
+
+                    switch (i)
+                    {
+                        case 0:
+                            _tipo_doc = "BO";
+                            break;
+                        case 1:
+                            _tipo_doc = "FA";
+                            break;
+                        case 2:
+                            _tipo_doc = "NC";
+                            break;
+                        case 3:
+                            _tipo_doc = "ND";
+                            break;
+
+                    }
+
+                    _carpeta_in = _rutas_in[i].ToString();
+                    string[] _archivos_txt = Directory.GetFiles(@_carpeta_in, "*.txt");
+
+                    if (_archivos_txt.Length > 0)
+                    {
+                        for (Int32 a = 0; a < _archivos_txt.Length; ++a)
+                        {
+
+                            string folder = _rutas_in[i].ToString();string file = _archivos_txt[a].ToString();
+
+                            _error = genimpr(folder, file);
+
+                            //_error = "erroreds";
+
+                            if (_error.Length == 0 )
+                            {
+                                if (File.Exists(file))
+                                {
+                                    File.Delete(file);
+                                }
+                            }
+                            else
+                            {
+
+                                string error_qr = folder + "\\error";
+
+                                if (!Directory.Exists(error_qr))
+                                {
+                                    Directory.CreateDirectory(@error_qr);
+                                }
+
+                                string _nombrearchivo_qr = Path.GetFileNameWithoutExtension(@file);
+                                string ruta_archivo_error = @error_qr + "//" + _nombrearchivo_qr + ".txt";
+
+                                TextWriter tw = new StreamWriter(@ruta_archivo_error, true);
+                                tw.WriteLine("1," + _error);
+                                tw.Flush();
+                                tw.Close();
+                                tw.Dispose();
+                            }
+                            //}
+                            //else
+                            //{
+                            //    TextWriter tw = new StreamWriter(@ruta_archivo_hash, true);
+                            //    tw.WriteLine("1," + _error);
+                            //    tw.Flush();
+                            //    tw.Close();
+                            //    tw.Dispose();
+
+                            //}
+
+
+                        }
+
+                    }
+                }
+
+
+            }
+            catch (Exception exc)
+            {
+
+                _error=exc.Message;
+            }
+        }
+
+        private static string genimpr(string folder,string file)
+        {
+            string _error = "";
+            try
+            {
+
+                Boolean tkregalo = false;
+
+                CrearTicket tk = new CrearTicket();
+
+                StreamReader sr = new StreamReader(@file, Encoding.Default);
+                string _formato_doc = sr.ReadToEnd();
+                sr.Close();
+
+                /*verificar la cantidad de str array*/
+
+                string[] str = Regex.Split(_formato_doc, "<td>");
+
+                Int32 n_impre = 0;
+
+                Byte[] qr =null;
+                Image im = null;
+                Bitmap bmp;
+
+                if (str.Length>1)
+                {
+                    string cadenaQR = str[1].ToString().Trim();
+                    qr = generaQR(cadenaQR);
+                    im = byteArrayToImage(qr);
+                    bmp = new Bitmap(im, new Size(100, 100));
+                    tk.HeaderImage = bmp;
+
+                    impresora_tda = str[3].Trim();
+                }
+
+                foreach(string cadena in str)
+                {
+                    string cad = "";
+                    switch (n_impre)
+                    {
+                        /*si es varlor 0 entonces imprime el contenido*/
+                        case 0:
+                            cad = ReemplazarCaracteresEspeciales(cadena.TrimEnd());
+                            cad = cad + "\n";
+                            cad = cad + "\n";
+
+                            RawPrinterHelper.SendStringToPrinter(impresora_tda, cad);
+                            
+                            break;
+                        /*impresion de la data del qr*/
+                        case 1:
+                            //cad = cadena.Trim();
+                            //Byte[] qr = generaQR(cad);
+                            //Image im = byteArrayToImage(qr);
+                            //Bitmap bmp = new Bitmap(im, new Size(100, 100));
+                            //tk.HeaderImage = bmp;
+                            tk.PrintQR(impresora_tda);
+                            break;
+                        /*si es que se abre gaveta*/
+                        case 2:
+                            cad = ReemplazarCaracteresEspeciales(cadena.Trim());
+                            
+                            if (cad=="1")
+                            {
+                                abrircajon();
+                            }
+
+                            break;
+                        /*ticket de regalo*/
+                        case 4:
+                            cad = cadena;
+
+                            if (cadena.Trim().Length>0)
+                            {
+                                tkregalo = true;
+                                RawPrinterHelper.SendStringToPrinter(impresora_tda, cad);
+                            }
+                            break;
+                    }
+
+                   
+
+                    n_impre += 1;
+                }
+
+                if (tkregalo)
+                {
+                    RawPrinterHelper.SendStringToPrinter(impresora_tda, "\x1B" + "d" + "\x07");
+                    RawPrinterHelper.SendStringToPrinter(impresora_tda, "\x1B" + "m");
+                }
+
+                //if (str.Length>0)
+                //{
+                //    if (str.Count()==4)
+                //    {
+                //        string valida_str = str[3].ToString().Trim();
+
+                //        if (valida_str.Length>0)
+                //        {
+                //            /*cortar papel*/
+                //            RawPrinterHelper.SendStringToPrinter(impresora_tda, "\x1B" + "d" + "\x07");
+                //            RawPrinterHelper.SendStringToPrinter(impresora_tda, "\x1B" + "m");
+                //        }
+                        
+                //    }
+                //}
+
+
+            }
+            catch (Exception exc)
+            {
+
+                _error = exc.Message;
+            }
+            return _error;
+        }
+        private static Image byteArrayToImage(byte[] bytesArr)
+        {
+            MemoryStream memstr = new MemoryStream(bytesArr);
+            Image img = Image.FromStream(memstr);
+            return img;
+        }
+        private static void abrircajon()
+        {
+            try
+            {
+                RawPrinterHelper.SendStringToPrinter(impresora_tda, "\x1B" + "p" + "\x00" + "\x0F" + "\x96");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        private static string[] caracteres =
+        {
+        "§","°",
+        " ","á",
+        "‚","é",
+        "¡","í",
+        "¢","ó",
+        "£","ú",
+        "µ","Á",
+        " ","É",
+        "Ö","Í",
+        "à","Ó",
+        "é","Ú",
+        "¥","Ñ",
+        "¤","ñ",       
+    };
+        private static string ReemplazarCaracteresEspeciales(string origen)
+        {
+            string destino = "";
+            List<string> listCaracteres = new List<string>();
+            for (int i = 0; i < origen.Length; i++)
+            {
+                listCaracteres.Add(origen[i].ToString());
+            }
+
+            for (int i = 0; i < listCaracteres.Count; i++)
+            {
+                for (int j = 0; j < caracteres.Length; j = j + 2)
+                {
+                    if (listCaracteres[i] == caracteres[j])
+                    {
+                        listCaracteres[i] = listCaracteres[i].Replace(listCaracteres[i], caracteres[j + 1]);
+                        j = caracteres.Length + 1;
+                    }
+                }
+            }
+
+            for (int i = 0; i < listCaracteres.Count; i++)
+            {
+                destino = destino + listCaracteres[i];
+            }
+
+            return destino;
         }
         #endregion
 

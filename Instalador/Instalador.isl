@@ -253,7 +253,6 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<row><td>ISExpHlp.dll</td><td/><td>&lt;ISRedistPlatformDependentFolder&gt;\ISExpHlp.dll</td></row>
 		<row><td>ISSELFREG.DLL</td><td/><td>&lt;ISRedistPlatformDependentFolder&gt;\isregsvr.dll</td></row>
-		<row><td>ISSetupFilesHelper</td><td/><td>&lt;ISRedistPlatformDependentFolder&gt;\SFHelper.dll</td></row>
 		<row><td>NewBinary1</td><td/><td>&lt;ISProductFolder&gt;\Support\Themes\InstallShield Blue Theme\banner.jpg</td></row>
 		<row><td>NewBinary10</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd</td></row>
 		<row><td>NewBinary11</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\CustomSetupIco.ibd</td></row>
@@ -342,8 +341,8 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Configuracion_Servicio.exe</td><td>{F3F90CD0-3755-44E1-AE15-2AF94F334473}</td><td>SERVICE.NET1</td><td>2</td><td/><td>configuracion_servicio.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Genera_Hash_Xml.Resultado_principal</td><td>{8172B548-154F-40C3-BC49-6D3CF448F68B}</td><td>INSTALLDIR</td><td>2</td><td/><td>genera_hash_xml.resultado_pr</td><td>81</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Configuracion_Servicio.exe</td><td>{9130BD14-172A-4223-A20F-2D944CBEB207}</td><td>SERVICE.NET1</td><td>2</td><td/><td>configuracion_servicio.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Genera_Hash_Xml.Resultado_principal</td><td>{8172B548-154F-40C3-BC49-6D3CF448F68B}</td><td>INSTALLDIR</td><td>2</td><td/><td>genera_hash_xml.resultado_pr</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{E7FAEBC9-23F2-4B4D-99E4-12CE26F57AB3}</td><td>CERTIFICADO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{1482D79C-F44D-41AF-9F94-0245550C651C}</td><td>ESQUEMAS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{6D518880-FBB3-49E6-AE0C-FFE3352DB825}</td><td>MAPAS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -906,7 +905,6 @@
 		<row><td>AdminWelcome</td><td>Next</td><td>NewDialog</td><td>AdminNetworkLocation</td><td>1</td><td>0</td></row>
 		<row><td>CancelSetup</td><td>No</td><td>EndDialog</td><td>Return</td><td>1</td><td>0</td></row>
 		<row><td>CancelSetup</td><td>Yes</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
-		<row><td>CancelSetup</td><td>Yes</td><td>DoAction</td><td>ISSetupFilesCleanup</td><td>1</td><td>200</td></row>
 		<row><td>CancelSetup</td><td>Yes</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
 		<row><td>CustomSetup</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>NOT Installed</td><td>0</td></row>
 		<row><td>CustomSetup</td><td>Back</td><td>NewDialog</td><td>MaintenanceType</td><td>Installed</td><td>0</td></row>
@@ -1016,11 +1014,9 @@
 		<row><td>SetupCompleteError</td><td>Cancel</td><td>EndDialog</td><td>Return</td><td>1</td><td>2</td></row>
 		<row><td>SetupCompleteError</td><td>Cancel</td><td>[Suspend]</td><td>1</td><td>1</td><td>1</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
-		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>ISSetupFilesCleanup</td><td>1</td><td>200</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1")</td><td>3</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
 		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>ISSetupFilesCleanup</td><td>1</td><td>201</td></row>
 		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>LAUNCHPROGRAM And PROGRAMFILETOLAUNCHATEND &lt;&gt; "" And NOT Installed</td><td>2</td></row>
 		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1") And NOT ISENABLEDWUSFINISHDIALOG</td><td>7</td></row>
 		<row><td>SetupCompleteSuccess</td><td>OK</td><td>EndDialog</td><td>Exit</td><td>1</td><td>3</td></row>
@@ -1037,7 +1033,6 @@
 		<row><td>SetupInterrupted</td><td>Cancel</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
 		<row><td>SetupInterrupted</td><td>Cancel</td><td>[Suspend]</td><td>1</td><td>1</td><td>1</td></row>
 		<row><td>SetupInterrupted</td><td>Finish</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
-		<row><td>SetupInterrupted</td><td>Finish</td><td>DoAction</td><td>ISSetupFilesCleanup</td><td>1</td><td>200</td></row>
 		<row><td>SetupInterrupted</td><td>Finish</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1")</td><td>3</td></row>
 		<row><td>SetupInterrupted</td><td>Finish</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
 		<row><td>SetupProgress</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
@@ -1084,8 +1079,6 @@
 		<row><td>ISSelfRegisterCosting</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterCosting</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
-		<row><td>ISSetupFilesCleanup</td><td>257</td><td>ISSetupFilesHelper</td><td>SFCleanupEx</td><td/><td/></row>
-		<row><td>ISSetupFilesExtract</td><td>257</td><td>ISSetupFilesHelper</td><td>SFStartupEx</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary19</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
@@ -1158,6 +1151,9 @@
 		<row><td>BATA_PROCESO1</td><td>CARVAJAL1</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
 		<row><td>BATA_PROCESO10</td><td>CARVAJAL10</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
 		<row><td>BATA_PROCESO11</td><td>CARVAJAL11</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
+		<row><td>BATA_PROCESO12</td><td>CARVAJAL12</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
+		<row><td>BATA_PROCESO13</td><td>CARVAJAL13</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
+		<row><td>BATA_PROCESO14</td><td>CARVAJAL14</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
 		<row><td>BATA_PROCESO2</td><td>CARVAJAL2</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
 		<row><td>BATA_PROCESO3</td><td>CARVAJAL3</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
 		<row><td>BATA_PROCESO4</td><td>CARVAJAL4</td><td>BATA_P~1|bata_proceso</td><td/><td>0</td><td/></row>
@@ -1170,6 +1166,9 @@
 		<row><td>CARVAJAL1</td><td>INTERFA1</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
 		<row><td>CARVAJAL10</td><td>INTERFA10</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
 		<row><td>CARVAJAL11</td><td>INTERFA11</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
+		<row><td>CARVAJAL12</td><td>INTERFA12</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
+		<row><td>CARVAJAL13</td><td>INTERFA13</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
+		<row><td>CARVAJAL14</td><td>INTERFA14</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
 		<row><td>CARVAJAL2</td><td>INTERFA2</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
 		<row><td>CARVAJAL3</td><td>INTERFA3</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
 		<row><td>CARVAJAL4</td><td>INTERFA4</td><td>CARVAJAL</td><td/><td>0</td><td/></row>
@@ -1187,6 +1186,9 @@
 		<row><td>DIRPROPERTY10</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DIRPROPERTY11</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DIRPROPERTY12</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>DIRPROPERTY13</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>DIRPROPERTY14</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>DIRPROPERTY15</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DIRPROPERTY2</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DIRPROPERTY3</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DIRPROPERTY4</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
@@ -1200,11 +1202,14 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>BATA_PROCESO11</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>BATA_PROCESO14</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA</td><td>DIRPROPERTY1</td><td>INTERFA</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA1</td><td>DIRPROPERTY2</td><td>INTERFA</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA10</td><td>DIRPROPERTY11</td><td>INTERFA</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA11</td><td>DIRPROPERTY12</td><td>INTERFA</td><td/><td>0</td><td/></row>
+		<row><td>INTERFA12</td><td>DIRPROPERTY13</td><td>INTERFA</td><td/><td>0</td><td/></row>
+		<row><td>INTERFA13</td><td>DIRPROPERTY14</td><td>INTERFA</td><td/><td>0</td><td/></row>
+		<row><td>INTERFA14</td><td>DIRPROPERTY15</td><td>INTERFA</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA2</td><td>DIRPROPERTY3</td><td>INTERFA</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA3</td><td>DIRPROPERTY4</td><td>INTERFA</td><td/><td>0</td><td/></row>
 		<row><td>INTERFA4</td><td>DIRPROPERTY5</td><td>INTERFA</td><td/><td>0</td><td/></row>
@@ -1956,13 +1961,17 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>cdbata.pfx</td><td>ISX_DEFAULTCOMPONENT</td><td>CDBATA.pfx</td><td>0</td><td/><td/><td/><td>1</td><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Genera_Hash_Xml\Certificado\CDBATA.pfx</td><td>1</td><td/></row>
-		<row><td>configuracion_servicio.exe</td><td>Configuracion_Servicio.exe</td><td>CONFIG~1.EXE|Configuracion_Servicio.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Configuracion_Servicio\bin\Debug\Configuracion_Servicio.exe</td><td>1</td><td/></row>
-		<row><td>factura_boleta.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>FACTUR~1.XML|FACTURA_BOLETA.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Genera_Hash_Xml\Esquemas\FACTURA_BOLETA.xml</td><td>1</td><td/></row>
-		<row><td>factura_boleta_std110.xml</td><td>ISX_DEFAULTCOMPONENT2</td><td>FACTUR~1.XML|FACTURA_BOLETA_STD110.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Genera_Hash_Xml\Mapas\FACTURA_BOLETA_STD110.xml</td><td>1</td><td/></row>
+		<row><td>cdbata.pfx</td><td>ISX_DEFAULTCOMPONENT</td><td>CDBATA.pfx</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Certificado\CDBATA.pfx</td><td>1</td><td/></row>
+		<row><td>configuracion_servicio.exe</td><td>Configuracion_Servicio.exe</td><td>CONFIG~1.EXE|Configuracion_Servicio.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Configuracion_Servicio\bin\Debug\Configuracion_Servicio.exe</td><td>1</td><td/></row>
+		<row><td>factura_boleta.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>FACTUR~1.XML|FACTURA_BOLETA.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Esquemas\FACTURA_BOLETA.xml</td><td>1</td><td/></row>
+		<row><td>factura_boleta_std110.xml</td><td>ISX_DEFAULTCOMPONENT2</td><td>FACTUR~1.XML|FACTURA_BOLETA_STD110.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Mapas\FACTURA_BOLETA_STD110.xml</td><td>1</td><td/></row>
 		<row><td>genera_hash_xml.resultado_pr</td><td>Genera_Hash_Xml.Resultado_principal</td><td>Genera_Hash_Xml.Resultado principal</td><td>0</td><td/><td/><td>0</td><td>1</td><td>&lt;Genera_Hash_Xml&gt;|Built</td><td>3</td><td/></row>
-		<row><td>notas.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>NOTAS.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Genera_Hash_Xml\Esquemas\NOTAS.xml</td><td>1</td><td/></row>
-		<row><td>notas_std110.xml</td><td>ISX_DEFAULTCOMPONENT2</td><td>NOTAS_~1.XML|NOTAS_STD110.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Genera_Hash_Xml\Mapas\NOTAS_STD110.xml</td><td>1</td><td/></row>
+		<row><td>notas.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>NOTAS.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Esquemas\NOTAS.xml</td><td>1</td><td/></row>
+		<row><td>notas_std110.xml</td><td>ISX_DEFAULTCOMPONENT2</td><td>NOTAS_~1.XML|NOTAS_STD110.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Mapas\NOTAS_STD110.xml</td><td>1</td><td/></row>
+		<row><td>percepcion10.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>PERCEP~1.XML|PERCEPCION10.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Esquemas\PERCEPCION10.xml</td><td>1</td><td/></row>
+		<row><td>percepcion_std10.xml</td><td>ISX_DEFAULTCOMPONENT2</td><td>PERCEP~1.XML|PERCEPCION_STD10.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Mapas\PERCEPCION_STD10.xml</td><td>1</td><td/></row>
+		<row><td>retencion10.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>RETENC~1.XML|RETENCION10.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Esquemas\RETENCION10.xml</td><td>1</td><td/></row>
+		<row><td>retencion_std10.xml</td><td>ISX_DEFAULTCOMPONENT2</td><td>RETENC~1.XML|RETENCION_STD10.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Genera_Hash_Xml\Mapas\RETENCION_STD10.xml</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2106,7 +2115,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Configuracion_Servicio.exe</td><td/><td/><td>_8948D754_E40A_4153_84BE_82EEA9DAE5F4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Configuracion_Servicio.exe</td><td/><td/><td>_A8AF10AC_579C_491C_92FB_2EE25743CC30_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Genera_Hash_Xml.Resultado_principal</td><td/><td/><td>_F6A2F7FD_81C1_4475_9338_DF46D9B71396_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_6A955CEE_2E04_4792_B773_89366E6D7057_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_4C24F87C_72EC_4563_A5F4_CDC267197C0D_FILTER</td><td/><td/><td/><td/></row>
@@ -2685,7 +2694,6 @@
 		<col def="S50">Language</col>
 		<col def="I2">Splash</col>
 		<col def="S0">Path</col>
-		<row><td>_isconfig.xml</td><td>_isconfig.xml</td><td/><td>0</td><td>0</td><td>&lt;ISProjectDataFolder&gt;\_isconfig.xml</td></row>
 	</table>
 
 	<table name="ISSetupPrerequisites">
@@ -2727,7 +2735,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1034</td><td>Bata Peru</td><td>0</td><td/><td>992335150</td></row>
+		<row><td>COMPANY_NAME</td><td>1034</td><td>Bata Peru</td><td>0</td><td/><td>732244593</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1034</td><td>Instalar siempre</td><td>0</td><td/><td>195238059</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1034</td><td>La configuración de colores de su sistema no es adecuada para ejecutar [ProductName].</td><td>0</td><td/><td>195238059</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1034</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>195238059</td></row>
@@ -3548,6 +3556,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1034</td><td>LAUNCH~1.EXE|Launch Configuracion_Servicio.exe</td><td>0</td><td/><td>472087915</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td/><td>0</td><td/><td>1227112104</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1034</td><td>LAUNCH~1.EXE|Launch Configuracion_Servicio.exe</td><td>0</td><td/><td>1227112104</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td/><td>0</td><td/><td>732244273</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1034</td><td>LAUNCH~1.EXE|Launch Activar_Servicio.exe</td><td>0</td><td/><td>732244273</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td/><td>0</td><td/><td>732258865</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1034</td><td>LAUNCH~1.EXE|Launch Configuracion_Servicio.exe</td><td>0</td><td/><td>732258865</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1034</td><td>Seleccione el servidor de base de datos de destino en la lista de servidores que aparece a continuación.</td><td>0</td><td/><td>195238059</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1034</td><td>En la lista de nombres de catálogo siguiente, seleccione el catálogo de base de datos de destino.</td><td>0</td><td/><td>195238059</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1034</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>195238059</td></row>
@@ -3836,8 +3848,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1034</td><td>El procesador no es el adecuado para ejecutar [ProductName].</td><td>0</td><td/><td>195238059</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1034</td><td>La cantidad de RAM no es la adecuada para ejecutar [ProductName].</td><td>0</td><td/><td>195238059</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1034</td><td>La resolución de pantalla no es la adecuada para ejecutar [ProductName].</td><td>0</td><td/><td>195238059</td></row>
-		<row><td>ID_STRING1</td><td>1034</td><td>http://www.BataPeru.com</td><td>0</td><td/><td>992335150</td></row>
-		<row><td>ID_STRING2</td><td>1034</td><td>Bata Peru</td><td>0</td><td/><td>1227126344</td></row>
+		<row><td>ID_STRING1</td><td>1034</td><td>http://www.BataPeru.com</td><td>0</td><td/><td>732244593</td></row>
+		<row><td>ID_STRING2</td><td>1034</td><td>Bata Peru</td><td>0</td><td/><td>732244593</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Service Hash (Bata)</td><td>0</td><td/><td>195270859</td></row>
 		<row><td>ID_STRING3</td><td>1034</td><td>Service Hash (Bata)</td><td>0</td><td/><td>195270859</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Contact:  David Mendoza</td><td>0</td><td/><td>195285195</td></row>
@@ -3845,7 +3857,11 @@
 		<row><td>ID_STRING5</td><td>1033</td><td>David Mendoza</td><td>0</td><td/><td>195268843</td></row>
 		<row><td>ID_STRING5</td><td>1034</td><td>David Mendoza</td><td>0</td><td/><td>195268843</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>david.mendoza@bata.com</td><td>0</td><td/><td>195256587</td></row>
-		<row><td>ID_STRING6</td><td>1034</td><td>http://www.BataPeru.com</td><td>0</td><td/><td>1227126344</td></row>
+		<row><td>ID_STRING6</td><td>1034</td><td>http://www.BataPeru.com</td><td>0</td><td/><td>732244593</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>Service Hash (Bata)</td><td>0</td><td/><td>732291473</td></row>
+		<row><td>ID_STRING7</td><td>1034</td><td>Service Hash (Bata)</td><td>0</td><td/><td>732291473</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>Generacion de Codigo Hash</td><td>0</td><td/><td>732238257</td></row>
+		<row><td>ID_STRING8</td><td>1034</td><td>Generacion de Codigo Hash</td><td>0</td><td/><td>732238257</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1034</td><td>Este componente no se instalará.</td><td>0</td><td/><td>195238059</td></row>
 	</table>
 
@@ -3960,10 +3976,12 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>Activar_Servicio.e_47D19B0D70834D52AAAEDC040BE93929.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>Activar_Servicio.e_49E8FBA38308491BB2536327DB3A18A7.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>Configuracion_Serv_1915FAA6C3F64225A0266C7BF95BE638.exe</td><td/><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Configuracion_Servicio\bin\Debug\Configuracion_Servicio.exe</td><td>0</td></row>
 		<row><td>Configuracion_Serv_4AF2213BB81944B0BFD57B19BB28F33C.exe</td><td/><td>D:\David\Generacion_Hash\Produccion\Local\Generacion_Hash\Configuracion_Servicio\bin\Debug\Configuracion_Servicio.exe</td><td>0</td></row>
 		<row><td>Configuracion_Serv_62F3745147E447528EF3280F3CE4A87D.exe</td><td/><td>D:\David\Generacion_Hash\Local\Generacion_Hash\Configuracion_Servicio\bin\Debug\Configuracion_Servicio.exe</td><td>0</td></row>
+		<row><td>Configuracion_Serv_A1DE3DE69C5C4019A5D2668B2A495CD0.exe</td><td/><td>D:\Fuentes\Generacion Hash\Generacion_Hash\Configuracion_Servicio\bin\Debug\Configuracion_Servicio.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4009,8 +4027,6 @@
 		<row><td>ISSelfRegisterCosting</td><td/><td>2201</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td/><td>5601</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td/><td>6601</td><td/><td/></row>
-		<row><td>ISSetupFilesCleanup</td><td>UILevel &lt; 5</td><td>6602</td><td/><td/></row>
-		<row><td>ISSetupFilesExtract</td><td/><td>3</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
@@ -4128,8 +4144,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
 		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td>ISPreventDowngrade</td><td/></row>
-		<row><td>ISSetupFilesCleanup</td><td>UILevel &lt; 5</td><td>1301</td><td/><td/></row>
-		<row><td>ISSetupFilesExtract</td><td/><td>3</td><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Not Installed</td><td>1210</td><td>InstallWelcome</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
@@ -4414,7 +4428,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ARPURLINFOABOUT</td><td>##ID_STRING1##</td><td/></row>
 		<row><td>AgreeToLicense</td><td>No</td><td/></row>
 		<row><td>ApplicationUsers</td><td>AllUsers</td><td/></row>
-		<row><td>DIRPROPERTY12</td><td>D:\</td><td/></row>
+		<row><td>DIRPROPERTY15</td><td>D:\</td><td/></row>
 		<row><td>DWUSINTERVAL</td><td>30</td><td/></row>
 		<row><td>DWUSLINK</td><td>CE6C4718C9CBB7CF4EAC27980E9B978FF9DB678FCE9CA7CFCEBCA00FDECBE0DFD9ABB0E8E9AC</td><td/></row>
 		<row><td>DefaultUIFont</td><td>ExpressDefault</td><td/></row>
@@ -4606,6 +4620,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="I2">Wait</col>
 		<col def="s72">Component_</col>
+		<row><td>NewEvent1</td><td>Service Hash (Bata)</td><td>129</td><td/><td>0</td><td>Genera_Hash_Xml.Resultado_principal</td></row>
 	</table>
 
 	<table name="ServiceInstall">
@@ -4622,6 +4637,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="s72">Component_</col>
 		<col def="L255">Description</col>
+		<row><td>NewServiceInstall1</td><td>Service Hash (Bata)</td><td>##ID_STRING7##</td><td>16</td><td>2</td><td>1</td><td/><td/><td/><td/><td/><td>Genera_Hash_Xml.Resultado_principal</td><td>##ID_STRING8##</td></row>
 	</table>
 
 	<table name="Shortcut">
@@ -4644,7 +4660,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>Configuracion_Servicio.exe</td><td>servic_1_service_hash__bata_</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>Configuracion_Servicio.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>Configuracion_Serv_4AF2213BB81944B0BFD57B19BB28F33C.exe</td><td>1</td><td>1</td><td>SERVICE.NET1</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>Configuracion_Servicio.exe</td><td>servic_1_service_hash__bata_</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>Configuracion_Servicio.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>Configuracion_Serv_A1DE3DE69C5C4019A5D2668B2A495CD0.exe</td><td>1</td><td>1</td><td>SERVICE.NET1</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

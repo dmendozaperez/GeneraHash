@@ -32,11 +32,12 @@
   <ItemGroup>
     <Reference Include="Carvajal.FEPE.PreSC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\AQUARELLA SQL\Sistema\Vb C# 2013\ELECTRONICO_CARVAJAL\ELECTRONICO\CARBAJAL DLL\Dlls\Carvajal.FEPE.PreSC.dll</HintPath>
+      <HintPath>..\..\..\..\David\AQUARELLA SQL\Sistema\Vb C# 2013\ELECTRONICO_CARVAJAL\ELECTRONICO\Sistema\www.aquarella.com.pe\Integrado\bin\Debug\Carvajal.FEPE.PreSC.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -46,13 +47,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="UBL20, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\AQUARELLA SQL\Sistema\Vb C# 2013\ELECTRONICO_CARVAJAL\ELECTRONICO\CARBAJAL DLL\Dlls\UBL20.dll</HintPath>
+      <HintPath>..\..\..\..\David\AQUARELLA SQL\Sistema\Vb C# 2013\ELECTRONICO_CARVAJAL\ELECTRONICO\Sistema\www.aquarella.com.pe\Integrado\bin\Debug\UBL20.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basico.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CrearTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceBata\Reference.cs">
       <AutoGen>True</AutoGen>
